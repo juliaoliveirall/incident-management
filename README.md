@@ -16,9 +16,9 @@ Permite cadastrar, listar e monitorar incidentes em uma aplicação full-stack c
 
 incident-management-system/
 
-├── api/ # Backend (Node.js + TypeScript + Express)
+├── api/  
 
-├── app/ # Frontend (React + TypeScript + Vite + TailwindCSS)
+├── app/  
 
 ├── .gitignore
 
@@ -96,8 +96,11 @@ incident-management-system/
 ## Git Workflow
 
 `main` — branch principal com o projeto completo
+
 `feature/nome-da-funcionalidade` — branches individuais para cada funcionalidade
+
 `dev` — branch de desenvolvimento para testes
+
 - Pull Requests para integrar as features
 
 

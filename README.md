@@ -49,16 +49,20 @@ incident-management-system/
 ##  Configuração do backend
 
 1. Entre na pasta do backend:
+   
 ```cd api```
 
-2. Instale as dependências:
+3. Instale as dependências:
+   
 ```npm install```
 
-3. Configure o arquivo .env
-4. Crie o banco de dados MySQL:
+5. Configure o arquivo .env
+6. Crie o banco de dados MySQL:
+   
 ```CREATE DATABASE incident_db;```
 
-5. Rode o backend:
+8. Rode o backend:
+   
 ```npm run dev```
 
 ---
@@ -66,13 +70,16 @@ incident-management-system/
 ## Configuração do frontend
 
 1. Entre na pasta do frontend:
+   
 ```cd app```
 
-2. Instale as dependências:
+3. Instale as dependências:
+   
 ```npm install```
 
-3. Configure o `src/services/api.ts` com a URL do backend
-4. Rode o frontend:
+5. Configure o `src/services/api.ts` com a URL do backend
+6. Rode o frontend:
+   
 ```npm run dev```
 
 ---
@@ -94,6 +101,3 @@ incident-management-system/
 - Pull Requests para integrar as features
 
 
-
-```bash
-cd api

@@ -104,20 +104,28 @@ A fase atual do projeto concluiu o alicerce (scaffolding) da aplicação full-st
 
 1. Entre na pasta do backend:
    
-```cd api```
+```
+cd api
+```
 
 2. Instale as dependências:
    
-```npm install```
+```
+npm install
+```
 
 3. Configure o arquivo .env
 4. Crie o banco de dados MySQL:
    
-```CREATE DATABASE incident_db;```
+```
+CREATE DATABASE incident_db;
+```
 
 5. Rode o backend:
    
-```npm run dev```
+```
+npm run dev
+```
 
 ---
 
@@ -125,16 +133,22 @@ A fase atual do projeto concluiu o alicerce (scaffolding) da aplicação full-st
 
 1. Entre na pasta do frontend:
    
-```cd app```
+```
+cd app
+```
 
 2. Instale as dependências:
    
-```npm install```
+```
+npm install
+```
 
 3. Configure o `src/services/api.ts` com a URL do backend
 4. Rode o frontend:
    
-```npm run dev```
+```
+npm run dev
+```
 
 ---
 

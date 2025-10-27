@@ -15,6 +15,7 @@ Permite cadastrar, listar e monitorar incidentes em uma aplicação full-stack c
 ##  Estrutura do projeto
 
 incident-management-system/
+
 ├── api/ # Backend (Node.js + TypeScript + Express)
 
 ├── app/ # Frontend (React + TypeScript + Vite + TailwindCSS)

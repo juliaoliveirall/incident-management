@@ -34,7 +34,8 @@ incident-management-system/
 - Node.js + TypeScript  
 - Express  
 - MySQL (usando mysql2)  
-- JWT para autenticação  
+- JWT para autenticação
+- bcrypt para hash de senhas
 - Axios (para comunicação com frontend)
 
 **Frontend:**

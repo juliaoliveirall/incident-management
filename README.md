@@ -70,6 +70,35 @@ A fase atual do projeto concluiu o alicerce (scaffolding) da aplicação full-st
 
 ## Roadmap (próximos passos)
 
+**🧩 1. Funcionalidades Principais:**
+- CRUD completo de Usuários
+- CRUD completo de Incidentes
+- Criação das tabelas possíveis extras:
+`atualizacoes_incidentes` 🕒
+`departamentos` 🏢
+`responsaveis_incidente` 👥
+
+**🔒 2. Autenticação e Segurança:**
+- Criptografia de senhas com bcrypt
+- Login e registro de usuários
+- Geração de JWT Tokens
+- Controle de acesso por nível de permissão (RBAC)
+
+**🔗 3. Integração e Fluxo de Dados:**
+- Conectar frontend (React) com API Node.js
+- Exibir incidentes cadastrados em tempo real
+- Implementar feedbacks visuais (alertas e status)
+
+**🎨 4. Interface e Experiência:**
+- Telas de Login, Dashboard e Gerenciamento de Incidentes
+- Layout responsivo e intuitivo
+- Melhorias de UX com mensagens e validações
+
+**🧪 5. Testes e Documentação:**
+- Testes básicos de API (Swagger)
+- Documentar endpoints e rotas principais
+- Atualizar README com instruções de uso
+
 
 ##  Configuração do backend
 

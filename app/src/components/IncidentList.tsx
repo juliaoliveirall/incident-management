@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { getIncidents } from "../services/IncidentService";
+import IncidentForm from "./IncidentForm";
 
 interface Incident {
   id: number;
@@ -13,18 +14,18 @@ export default function IncidentList() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
-  useEffect(() => {
-    async function loadIncidents() {
-      try {
-        const data = await getIncidents();
-        setIncidents(data);
-      } catch (err) {
-        setError("Erro ao carregar incidentes");
-      } finally {
-        setLoading(false);
-      }
+  async function loadIncidents() {
+    try {
+      const data = await getIncidents();
+      setIncidents(data);
+    } catch (err) {
+      setError("Erro ao carregar incidentes");
+    } finally {
+      setLoading(false);
     }
+  }
 
+  useEffect(() => {
     loadIncidents();
   }, []);
 
@@ -35,9 +36,8 @@ export default function IncidentList() {
     <div className="p-4">
       <h1 className="text-xl font-bold mb-4">Lista de Incidentes</h1>
 
-      <button className="bg-blue-600 text-white px-3 py-2 rounded mb-4">
-        Adicionar incidente
-      </button>
+      {/* Formulário */}
+      <IncidentForm onSuccess={loadIncidents} />
 
       <table className="w-full border border-gray-300">
         <thead>

@@ -5,6 +5,7 @@ import IncidentForm from "./IncidentForm";
 interface Incident {
   id: number;
   title: string;
+  description: string;
   status: string;
   created_at: string;
 }
@@ -19,7 +20,7 @@ export default function IncidentList() {
       const data = await getIncidents();
       setIncidents(data);
     } catch (err) {
-      setError("Erro ao carregar incidentes");
+      setError("erro ao carregar incidentes");
     } finally {
       setLoading(false);
     }
@@ -28,13 +29,12 @@ export default function IncidentList() {
   useEffect(() => {
     loadIncidents();
   }, []);
-
-  if (loading) return <p className="text-gray-600">Carregando...</p>;
+  if (loading) return <p className="text-gray-600">carregando...</p>;
   if (error) return <p className="text-red-500">{error}</p>;
 
   return (
     <div className="p-4">
-      <h1 className="text-xl font-bold mb-4">Lista de Incidentes</h1>
+      <h1 className="text-xl font-bold mb-4">lista de Incidentes</h1>
 
       {/* Formulário */}
       <IncidentForm onSuccess={loadIncidents} />

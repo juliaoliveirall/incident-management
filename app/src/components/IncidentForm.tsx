@@ -2,7 +2,7 @@ import { useState } from "react";
 import { createIncident } from "../services/IncidentService";
 
 interface IncidentFormProps {
-  onSuccess: () => void; 
+  onSuccess: () => void;
 }
 
 export default function IncidentForm({ onSuccess }: IncidentFormProps) {
@@ -21,14 +21,14 @@ export default function IncidentForm({ onSuccess }: IncidentFormProps) {
 
     try {
       await createIncident({ title, description, status });
-      setSuccess("Incidente criado com sucesso!");
+      setSuccess("incidente criado com sucesso!");
       setTitle("");
       setDescription("");
       setStatus("open");
 
-      onSuccess(); // ⬅ recarrega a lista no componente pai
+      onSuccess(); 
     } catch (err) {
-      setError("Erro ao criar incidente");
+      setError("erro ao criar incidente");
     } finally {
       setLoading(false);
     }
@@ -36,13 +36,13 @@ export default function IncidentForm({ onSuccess }: IncidentFormProps) {
 
   return (
     <form onSubmit={handleSubmit} className="border p-4 rounded mb-4 shadow">
-      <h2 className="text-lg font-bold mb-2">Criar Incidente</h2>
+      <h2 className="text-lg font-bold mb-2">criar Incidente</h2>
 
       {error && <p className="text-red-500">{error}</p>}
       {success && <p className="text-green-600">{success}</p>}
 
       <div className="mb-3">
-        <label className="block mb-1">Título</label>
+        <label className="block mb-1">título</label>
         <input
           className="w-full border p-2 rounded"
           value={title}
@@ -52,7 +52,7 @@ export default function IncidentForm({ onSuccess }: IncidentFormProps) {
       </div>
 
       <div className="mb-3">
-        <label className="block mb-1">Descrição</label>
+        <label className="block mb-1">descrição</label>
         <textarea
           className="w-full border p-2 rounded"
           value={description}
@@ -67,9 +67,9 @@ export default function IncidentForm({ onSuccess }: IncidentFormProps) {
           value={status}
           onChange={(e) => setStatus(e.target.value)}
         >
-          <option value="open">Aberto</option>
-          <option value="in_progress">Em progresso</option>
-          <option value="closed">Fechado</option>
+          <option value="aberto">aberto</option>
+          <option value="em análise">em análise</option>
+          <option value="resolvido">resolvido</option>
         </select>
       </div>
 
@@ -78,7 +78,7 @@ export default function IncidentForm({ onSuccess }: IncidentFormProps) {
         disabled={loading}
         className="bg-blue-600 text-white px-4 py-2 rounded"
       >
-        {loading ? "Salvando..." : "Criar incidente"}
+        {loading ? "salvando..." : "criar incidente"}
       </button>
     </form>
   );

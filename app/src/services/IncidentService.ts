@@ -13,7 +13,13 @@ export const getIncidents = async (): Promise<Incident[]> => {
   return response.data;
 };
 
-export const createIncident = async (incident: any) => {
-  const response = await api.post("/incidents", incident);
-  return response.data;
+export const createIncident = async (data: any) => {
+  return api.post("/incidents", {
+    titulo: data.title,
+    descricao: data.description,
+    status: data.status,
+    tipo: "digital",
+    prioridade: "média",
+    id_usuario_reportou: 1,
+  });
 };

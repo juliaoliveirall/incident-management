@@ -1,6 +1,5 @@
 import express from "express";
 import { IncidentController } from "../controllers/IncidentController";
-
 const router = express.Router();
 
 router.post("/", IncidentController.createIncident);

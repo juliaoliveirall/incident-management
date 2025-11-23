@@ -1,3 +1,4 @@
+
 import { Router } from "express";
 import { UserController } from "../controllers/UserController";
 import { authMiddleware } from "../middlewares/auth";
@@ -21,8 +22,6 @@ router.get("/", authMiddleware, role(["gestor"]), UserController.getAll);
 router.delete("/:id", authMiddleware, role(["gestor"]), UserController.delete);
 router.put("/:id", authMiddleware, role(["gestor"]), UserController.update);
 router.post("/",authMiddleware,role(["gestor"]),UserController.create);
-
-
 
 
 

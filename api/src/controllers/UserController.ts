@@ -152,8 +152,4 @@ async getAll(req: Request, res: Response) {
   return res.json(users);
 },
 
-
-
-
-
 };

@@ -14,6 +14,8 @@ dotenv.config();
 // integrar com o frontend
 app.use(cors());
 
+app.use("/", routes);
+
 app.get("/test-db", async (req, res) => {
   try {
     const [rows] = await db.query("SELECT 1 + 1 AS result");
@@ -24,7 +26,6 @@ app.get("/test-db", async (req, res) => {
   }
 });
 
-app.use("/", routes);
 
 app.listen(3000, () => {
   console.log("Servidor rodando na porta 3000");
